@@ -10,11 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header class="header-container">
       <div class="header-logo">
-        <a href="/html/index.html">
+        <a href="/index.html">
           <svg
             id="Component_2"
             data-name="Component 2"
@@ -41,9 +42,9 @@
       <div class="header-menus">
         <ul>
           <li><a href="/launchpad-home.html">Launchpad</a></li>
-          <li><a href="/launchpad.html">Swap</a></li>
-          <li><a href="/stats.html">Stats</a></li>
           <li><a href="/staking.html">Staking</a></li>
+          <li><a href="/stats.html">Stats</a></li>
+          <li><a href="/launchpad.html">Swap</a></li>
           <li><a href="" class="btn-menu">Join Telegram ></a></li>
         </ul>
         <div class="header-menus-avatar">
@@ -55,6 +56,87 @@
     </header>
 
     <main>
+      <!-- Entry  -->
+      <div class="staking-section">
+        <div class="staking-section-first">
+          <h5>ALLOCATION STAKING</h5>
+          <p>
+            There is a 2% deposit fee taken on all new EDUM deposits. This fee
+            is redistributed to the current EDUM stakers, rewards long-term
+            participants and combats dilution.<br /><br />
+            We have introduced a post-IDO cooldown period, where a fee in EDUM
+            will be taken and redistributed to stakers, based on when you
+            unstake. The fee begins at 15% post-IDO, and reduces every second
+            toward 0% over 15 days.
+          </p>
+          <div class="buttons">
+            <button>Add EDUM to Metamask</button>
+            <button>Stake Info</button>
+          </div>
+        </div>
+
+        <div class="staking-section-second">
+          <div class="staking-section-second-relative">
+            <h6>Total Value Locked</h6>
+            <p>$25.37M</p>
+            <span>|</span>
+            <h6>EDUM Price</h6>
+            <p>$1.55</p>
+          </div>
+          <div class="staking-section-second-content">
+            <div class="staking-section-second-content-header">
+              <p>STAKE EDUM</p>
+              <p class="second">Max</p>
+            </div>
+            <div class="staking-section-second-content-main">
+              <div class="first">
+                <p>Balance:</p>
+                <h6>0 (-$0)</h6>
+              </div>
+              <div class="second">
+                <input type="text" placeholder="0 EDUM" />
+                <button>Connect Wallet ></button>
+              </div>
+            </div>
+          </div>
+          <div class="staking-section-second-content">
+            <div class="staking-section-second-content-header">
+              <p>WITHDRAW EDUM</p>
+              <p class="second">Max</p>
+            </div>
+            <div class="staking-section-second-content-main">
+              <div class="first">
+                <p>Balance:</p>
+                <h6>0 (-$0)</h6>
+              </div>
+              <div class="second">
+                <input type="text" placeholder="0 EDUM" />
+                <button>Connect Wallet ></button>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="staking-section-second-footer">
+            <h6>Your Stats</h6>
+            <h6>Current APY <span>8.5%</span></h6>
+            <h6>My Staked EDUM<span>0 EDUM</span></h6>
+            <h6>My Earned EDUM<span>0 EDUM</span></h6>
+            <h6>Compound EDUM<span>0 EDUM</span></h6>
+          </div>
+          <div class="divider"></div>
+          <div class="staking-section-second-footer">
+            <h6>EARN EDUM POINTS <button>Lock Staked EDUM ></button></h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total locked -->
+      <div class="total-locked">
+        <p>Total Value Locked <span>$25.37M</span></p>
+        <h6>|</h6>
+        <p>EDUM Price<span>$1.55</span></p>
+      </div>
+
       <!-- MY LOCK HİSTORY -->
       <div class="lock-history-container">
         <div class="lock-history-wrapper">
@@ -71,6 +153,36 @@
       <div class="no-tokens">
         <h5>No Tokens Locked</h5>
         <p>You Don’t Have Any Tokens Locked</p>
+      </div>
+
+      <!-- Charts -->
+      <div class="staking-charts">
+        <div class="staking-charts-header">
+          <h6>
+            EDUM TOKENS STAKED<br />
+            OVER TIME
+          </h6>
+          <div class="staking-charts-header-main">
+            <div class="staking-charts-header-main-title">
+              <p>Total EDUM Locked</p>
+              <h6>16,222,766.64</h6>
+              <span>~$25,145,288.29</span>
+            </div>
+            <div class="staking-divider">|</div>
+            <div class="staking-charts-header-main-title">
+              <p>Total Rewards Redistributed</p>
+              <h6>1,195,602.14</h6>
+              <span>~$1,853,183.31</span>
+            </div>
+            <div class="staking-divider">|</div>
+            <div class="staking-charts-header-main-title">
+              <p>Reward Unlock Rate</p>
+              <h6>0.01 EDUM <span>/ SEC</span></h6>
+              <span>~$0.01</span>
+            </div>
+          </div>
+        </div>
+        <canvas id="myChart" width="300" height="300"></canvas>
       </div>
 
       <!-- GET ALERTS -->
@@ -140,4 +252,37 @@
       </div>
     </footer>
   </body>
+  <script>
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const data = {
+      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      datasets: [
+        {
+          label: "Filled",
+          backgroundColor: "pink",
+          borderColor: "pink",
+          data: [
+            80000, 81000, 79000, 75000, 78000, 80000, 45000, 43000, 40000,
+            38000, 40000, 42000,
+          ],
+          fill: true,
+        },
+      ],
+    };
+    const config = {
+      type: "line",
+      data: data,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    };
+
+    const myChart = new Chart(ctx, config);
+  </script>
 </html>

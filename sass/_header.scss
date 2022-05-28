@@ -59,7 +59,7 @@ header{
             @include media(medium) {
                 width: 45px;
                 height: 45px;
-                margin-left: 5px;
+                margin-left: 0px;
               }
         }
     
@@ -78,7 +78,7 @@ header{
                 justify-content: center;
 
                 @include media(large) {
-                    margin-right:10px ;
+                    margin-right:5px ;
                   }
 
                 .btn-menu{
