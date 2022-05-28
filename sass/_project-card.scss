@@ -1,0 +1,323 @@
+.project-card-main-container{
+    width: 100%;
+    height: 100%;
+    min-height: 1244px;
+    position: relative;
+    background-image: url("../assets/Path 5.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    @include media(large) {
+        margin: 50px 0;
+     }
+
+        .project-card-wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            z-index: 99;
+            padding: 5px 200px;
+        
+            @include media(xxlarge) {
+                padding: 5px 100px;
+            }
+            @include media(xlarge) {
+                padding: 5px 25px;
+            }
+            @include media(medium) {
+                padding: 5px;
+            }
+        }
+
+        .project-card-main-wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include media(large) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .project-card-main{
+            width: 100%;
+            height: 100%;
+            min-height: 600px;
+            border-radius: 20px;
+            position: relative;
+            background-image: url('../assets/background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 5px;
+
+            @include media(large) {
+                flex-basis: 47%;
+            }
+
+            @include media(medium) {
+                flex-basis: 80%;
+                margin: 15px;
+            }
+
+            @include media(small) {
+                flex-basis: 100%;
+            }
+
+            .project-card-header{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0%;
+                width: 100%;
+                height: 15%;
+                padding: 10px 20px;
+
+
+                img{
+                    width: 58px;
+                    height: 58px;
+                }
+
+                &-title{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    color: #fff;
+                    margin-left: 10px;
+                }
+
+            }
+
+            .project-card-content{
+                position: absolute;
+                width: 100%;
+                height: 85%;
+                top: 15%;
+                left: 0%;
+                border-radius: 20px;
+                background-color: #fff;
+                padding: 10px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-first{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+                    max-height: 55px;
+
+                    h6{
+                        font-size: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        span{
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #9dccee;
+                        }
+                    }
+
+                    &-logo{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                        width: 110px;
+                        height: 100%;
+
+                        button{
+                            width: 75px;
+                            height: 42px;
+                            border: none;
+                            background-color: #9dccee;
+                            margin-right: 5px;
+                            border-radius: 15px;
+                        }
+
+                        svg{
+                            width: 35px;
+                            height: 42px;
+                        }
+                    }
+                }
+
+                &-second{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+
+                    & > * {
+                        margin: 10px 0;
+                    }
+
+                    button{
+                        background: linear-gradient(90deg, #fad4e5 0%, #fad4e5 16%, #9dccee 100%);
+                        color: #fff;
+                        border-radius: 10px;
+                        border: none;
+                        outline: none;
+                        height: 40px;
+                    }
+
+                    &-text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+
+                        h6{
+                            font-weight: 500;
+                            font-size:  16px;
+                            text-align: center;
+                        }
+                    }
+
+                    &-footer{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        text-align: center;
+                        max-height: 65px;
+
+                        h6{
+                            font-size: 16px;
+
+                            span{
+                                color: #9dccee;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-launch{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            @include media(large) {
+                flex-wrap: wrap;
+            }
+
+            h6{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 35px;
+                font-weight: 500;
+            }
+
+            .project-card-little{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 75px;
+                border-top-left-radius: 75px;
+                border-bottom-left-radius: 75px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: #fff;
+                margin: 0 5px;
+
+                @include media(large) {
+                   margin: 10px;
+                }
+
+                .circle{
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 75px;
+                    border: 1px solid #A6CBEB;
+                }
+
+                p{
+                    width: 75px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .gradient-card{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(90deg, #fad4e5 0%, #fad4e5 16%, #9dccee 100%);
+                    margin-right:20px;
+                }
+            }
+        }
+
+        .project-card-head{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+
+            h3{
+                width: 100%;
+                font-size: 73px;
+                font-weight: 400;
+
+                span{
+                    font-size: 40px;
+                    font-weight: 300;
+                    
+                    @include media(medium) {
+                        font-size: 22px;
+                    }
+                }
+
+                @include media(medium) {
+                    font-size: 36px;
+                }
+            }
+
+            button{
+                width: 140px;
+                background-color: #fff;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                height: 40px;
+
+                &:focus ,&:focus-visible{
+                    border: none;
+                    outline: none;
+                }
+            }
+    }
+
+}

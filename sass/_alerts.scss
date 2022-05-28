@@ -1,0 +1,99 @@
+.get-alerts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    z-index: 99;
+
+      @include media(large) {
+        margin-top: 50px;
+      }
+}
+
+.get-alerts-container{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right:5px ;
+
+    h4{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+
+        span{
+            color: #9DCCEE;
+        }
+
+        @include media(large) {
+            font-size: 25px;
+          }
+    }
+
+    .get-alerts-wrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        h5{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            position: absolute;
+            top: 10%;
+            left: 0%;
+            z-index: 99;
+        }
+
+        .input-button{
+            position: absolute;
+            top: 36%;
+            left: 75%;
+            width: 50px;
+            height: 40px;
+            background-color: #9DCCEE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            z-index: 99;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        input{
+            position: absolute;
+            border-radius: 15px;
+            top: 50%;
+            left: 10%;
+            width: 80%;
+            height: 50px;
+            transform: translate(0 , -50%);
+            border: none;
+            z-index: 99;
+
+            &:focus, &:hover, &:active,&:target,&:focus-visible{
+                border: none;
+                outline:none;
+            }
+
+            &::placeholder{
+                padding-left: 10px;
+            }
+        }
+    }
+}

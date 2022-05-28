@@ -1,0 +1,100 @@
+.launchpad-cards-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+    padding: 5px 200px;
+
+    @include media(xxlarge) {
+        padding: 5px 100px;
+      }
+
+    @include media(xlarge) {
+        padding: 5px 25px;
+      }
+
+    @include media(medium) {
+        padding: 5px;
+      }
+
+    .launch-cards-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center; 
+
+        @include media(large) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+
+        .lauch-card{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            position: relative;
+            background-color: #fff;
+            background-clip: padding-box;
+            border:3px solid transparent;
+            margin: 5px;
+            padding: 45px;
+            box-sizing: content-box;
+            min-height: 250px;
+            border-radius: 10px;
+
+            @include media(large) {
+                flex-basis: 30%;  
+              }
+            @include media(small) {
+                flex-basis: 100%;  
+              }
+    
+            &:before {
+                content: '';
+                box-sizing: content-box;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                z-index: -1;
+                margin: -3px;
+                z-index: -1;
+                border-radius: inherit;
+                background: linear-gradient(90deg, rgba(250,212,229,1) 0%, rgba(250,212,229,1) 16%, rgba(157,204,238,1) 100%);
+              }
+
+              img{
+                position: absolute;
+                top: -20%;
+                left: 0;
+                width: 120px;
+                height: 120px;
+            }
+
+            h6{
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            p{
+                font-size: 14px;
+            }
+
+            button{
+                font-size: 14px;
+                background: transparent;
+                border: 1px solid #A6CBEB;
+                font-weight: 500;
+                width: 100%;
+                height: 40px;
+
+                &:focus ,&:focus-visible{
+                    outline: none;
+                }
+            }
+        }
+    }
+}

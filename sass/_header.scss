@@ -1,0 +1,121 @@
+header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 200px;
+
+    @include media(xxlarge) {
+        padding: 5px 100px;
+      }
+    @include media(xlarge) {
+        padding: 5px 25px;
+      }
+    @include media(large) {
+        flex-direction: column;
+        height: 150px;
+      }
+    @include media(medium) {
+        padding: 5px;
+      }
+
+    .header-logo{
+        width: 100%;
+
+        svg{
+            width: 40px;
+        }
+
+       a{
+
+         @include media(large) {
+           display: flex;
+           justify-content: center;
+           margin: 10px 0;
+          }
+        } 
+        }
+
+    .header-menus{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-menus-avatar{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #9DCCEE;
+            overflow: hidden;
+            margin-left: 15px;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+
+            @include media(medium) {
+                width: 45px;
+                height: 45px;
+                margin-left: 5px;
+              }
+        }
+    
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 40px;
+
+            li{
+                width: 100%;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include media(large) {
+                    margin-right:10px ;
+                  }
+
+                .btn-menu{
+                    width: 120px;
+                    height: 40px;
+                    border: 1px solid #9DCCEE;
+                    border-radius: 5px;
+                    text-align: center;
+                    white-space: nowrap;
+
+                    @include media(medium) {
+                        width: 105px;
+                      }
+                }
+                
+                a{
+                    color: #404041;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include media(medium) {
+                        font-size: 14px;
+                      }
+                    @include media(small) {
+                        font-size: 12px;
+                      }
+
+                    &:hover{
+                        color: #9DCCEE;
+                    }
+                }
+            }
+        }
+    }
+
+}

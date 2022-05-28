@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308.011" height="307.011" viewBox="0 0 308.011 307.011">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fad4e5"/>
+      <stop offset="0.315" stop-color="#fad4e5"/>
+      <stop offset="1" stop-color="#9dccee"/>
+    </linearGradient>
+    <filter id="Path_14" x="33.505" y="36.505" width="240" height="240" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_9" data-name="Group 9" transform="translate(6.242 6.856)">
+    <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="147.5" cy="147" rx="147.5" ry="147" transform="translate(0.263 -0.351)" opacity="0.396" fill="url(#linear-gradient)"/>
+    <path id="Path_21" data-name="Path 21" d="M147.5,0C228.962,0,295,65.814,295,147S228.962,294,147.5,294,0,228.186,0,147,66.038,0,147.5,0Z" transform="translate(0.263 -0.351)" fill="#fff"/>
+    <g transform="matrix(1, 0, 0, 1, -6.24, -6.86)" filter="url(#Path_14)">
+      <path id="Path_14-2" data-name="Path 14" d="M111,0A111,111,0,1,1,0,111,111,111,0,0,1,111,0Z" transform="translate(42.51 42.51)" fill="#fff"/>
+    </g>
+    <g id="Group_73" data-name="Group 73" transform="translate(72.263 82.652)">
+      <path id="Path_14-3" data-name="Path 14" d="M7.525,64.482,41.4,6.509h67.67l33.821,57.973-33.821,57.973H41.346ZM37.674,0,0,64.482l37.623,64.485h75.168l37.674-64.485L112.791,0Z" fill="#daaa81"/>
+      <path id="Path_15" data-name="Path 15" d="M793.56,611.111h-3.822l-45.41,78.57v-.057l-2.435,4.208-21.418-36.625,23.146-39.586H761l-24.26,41.931,3.762,6.466,31.746-54.906H739.9l-26.946,46.1L739.9,703.3h4.042l.135-.255.029.007,0,0,47.567-82.265,8.754,14.944-35.293,61.062h-.051L761.31,703.3h7.583l4.924-8.512,30.36-52.589,8.753,15-14.074,24.18L786.177,703.3h7.383l26.946-46.1Z" transform="translate(-691.496 -592.724)" fill="#daaa81"/>
+    </g>
+  </g>
+</svg>
