@@ -180,30 +180,20 @@ header .header-menus ul li a:hover {
 
 footer {
   width: 100%;
-  height: 650px;
+  height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
+  background-image: url("/assets/Path 23.svg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 586px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   footer {
-    height: 980px;
-  }
-}
-
-footer img {
-  width: 100%;
-  max-height: 650px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
-  position: absolute;
-}
-
-@media (max-width: 768px) {
-  footer img {
-    min-height: 980px;
+    max-height: 986px;
   }
 }
 
@@ -250,9 +240,6 @@ footer .footer-container .footer-first {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media (max-width: 992px) {
@@ -407,7 +394,7 @@ footer .footer-container .footer-second {
       -ms-flex-align: center;
           align-items: center;
   background-image: url("/assets/Path 13.svg");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -686,7 +673,7 @@ footer .footer-container .footer-second {
   height: 100%;
   min-height: 515px;
   background-image: url("../assets/stats.svg");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -1071,6 +1058,7 @@ footer .footer-container .footer-second {
           align-items: flex-start;
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
 }
 
 .lock-history-container .lock-history-wrapper h5 {
@@ -1091,6 +1079,8 @@ footer .footer-container .footer-second {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .lock-history-container .lock-history-wrapper ul li {
@@ -1103,17 +1093,33 @@ footer .footer-container .footer-second {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
-  margin-bottom: 10px;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  margin: 10px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .lock-history-container .lock-history-wrapper ul li {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .lock-history-container .lock-history-wrapper ul li {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .lock-history-container .lock-history-wrapper ul li span {
   color: #9DCCEE;
+  text-align: center;
 }
 
 .launchpad-home-container {
@@ -1430,6 +1436,7 @@ footer .footer-container .footer-second {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 10px;
 }
 
 .entry-title-container .entry-title-wrapper .entry-title-heading h6 {
@@ -1560,7 +1567,8 @@ footer .footer-container .footer-second {
 
 .edulaunch-container {
   width: 100%;
-  min-height: 785px;
+  min-height: 1250px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2146,7 +2154,7 @@ footer .footer-container .footer-second {
   position: relative;
   background-image: url("../assets/background.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   margin: 10px;
   -ms-flex-preferred-size: 30%;
@@ -2372,7 +2380,7 @@ footer .footer-container .footer-second {
   height: 100%;
   min-height: 893px;
   background-image: url("/assets/launchpad.png");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5px 200px;
@@ -2454,7 +2462,7 @@ footer .footer-container .footer-second {
 
 .staking-section {
   background-image: url("/assets/Path101.svg");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -3045,8 +3053,7 @@ footer .footer-container .footer-second {
 .project-card-main-container {
   width: 100%;
   height: 100%;
-  min-height: 1244px;
-  position: relative;
+  min-height: 2000px;
   background-image: url("../assets/Path 5.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -3061,6 +3068,12 @@ footer .footer-container .footer-second {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px 0;
+}
+
+@media (max-width: 2500px) {
+  .project-card-main-container {
+    min-height: 1600px;
+  }
 }
 
 @media (max-width: 992px) {

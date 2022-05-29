@@ -1,5 +1,9 @@
 @mixin media ($screensize) {
 
+    @if ($screensize == xxxlarge) {
+        @media(max-width: 2500px) { @content };
+    }
+
     @if ($screensize == xxlarge) {
         @media(max-width: 1560px) { @content };
     }
