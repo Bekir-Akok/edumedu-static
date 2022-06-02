@@ -88,6 +88,7 @@
                 margin: -3px;
                 z-index: -1;
                 border-radius: inherit;
+                box-shadow: 0px 0px 22px 5px rgba(157,204,238,1);
                 background: linear-gradient(90deg, rgba(250,212,229,1) 0%, rgba(250,212,229,1) 16%, rgba(157,204,238,1) 100%);
               }
 
@@ -180,6 +181,11 @@
   p{
     font-size: 16px;
     margin-bottom: 25px;
+  }
+
+  img{
+    width: 50px;
+    height: 50px;
   }
 
 
@@ -289,11 +295,11 @@
   }
 
   table {
-    border-collapse: collapse;
     width: 100%;
     white-space: nowrap;
 
     td, th {
+      border: 1px solid #404041;
       text-align: left;
       padding: 8px;
       min-width: 100px;

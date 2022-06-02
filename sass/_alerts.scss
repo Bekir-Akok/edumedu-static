@@ -51,7 +51,7 @@
 
         .input-button{
             position: absolute;
-            top: 36%;
+            top: 42.5%;
             left: 75%;
             width: 50px;
             height: 40px;
@@ -71,6 +71,10 @@
             border-radius: 20px;
         }
 
+        h5{
+            font-size: 24px;
+        }
+
         input{
             position: absolute;
             border-radius: 15px;
@@ -81,14 +85,13 @@
             transform: translate(0 , -50%);
             border: none;
             z-index: 99;
+            padding-left: 10px;
+            font-size: 14px;
+            margin-top: 10px;
 
             &:focus, &:hover, &:active,&:target,&:focus-visible{
                 border: none;
                 outline:none;
-            }
-
-            &::placeholder{
-                padding-left: 10px;
             }
         }
     }

@@ -49,12 +49,14 @@
                 flex-direction: column;
                 align-items: center;
                 font-size: 18px;
-                flex-basis: 32%;
-                margin: 10px;
+                flex-basis: 24%;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 width: 100%;
+                text-align: center;
 
                 @include media(large) {
-                  flex-basis: 45%;
+                  flex-basis: 32%;
                 }
                 @include media(small) {
                   flex-basis: 100%;
