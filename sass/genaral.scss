@@ -16,7 +16,6 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
     color: #404041;
 }
 
@@ -35,3 +34,18 @@ main{
     justify-content: space-between;
     flex-direction: column;
 }
+
+p,li,a,button,input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,div{
+    font-family: 'İntegral';
+}
+
+@font-face {
+    font-family: "İntegral";
+    src: url("../font/Fontspring-DEMO-integralcf-regular.otf");
+    font-display: swap;
+  }
+

@@ -64,7 +64,7 @@
         .first-section-card{
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 430px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -74,6 +74,9 @@
             background-clip: padding-box;
             border:3px solid transparent; 
 
+            @include media(large) {
+                height: 400px;
+            }
             @include media(medium) {
                 width: 60%;
             }
@@ -117,6 +120,10 @@
                 flex-direction: column;
                 align-items: center;
                 margin-top: 150px;
+
+                @include media(large) {
+                  margin-top: 100px;
+              }
 
                 h5{
                     text-align: center;
