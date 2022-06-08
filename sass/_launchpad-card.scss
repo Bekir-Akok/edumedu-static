@@ -5,10 +5,10 @@
     align-items: center;
     justify-content: center;
     margin: 80px 0;
-    padding: 5px 200px;
+    padding: 5px ;
 
     @include media(xxlarge) {
-        padding: 5px 100px;
+        padding: 5px ;
       }
 
     @include media(xlarge) {
@@ -24,6 +24,8 @@
         height: 100%;
         display: flex;
         align-items: center; 
+        max-width: 1400px;
+        margin: 0 auto;
 
         @include media(large) {
           flex-wrap: wrap;

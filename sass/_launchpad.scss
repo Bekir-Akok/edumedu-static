@@ -5,11 +5,12 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 5px 200px;
-    margin: 50px 0;
+    padding: 5px ;
+    margin: 50px auto;
+    max-width: 1400px;
 
     @include media(xxlarge) {
-        padding: 5px 100px;
+        padding: 5px ;
       }
     @include media(xlarge) {
         padding: 5px 25px;
@@ -195,10 +196,13 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5px 200px;
+    padding: 5px ;
+    display: flex;
+    align-items: center;
+    
 
     @include media(xxlarge) {
-        padding: 5px 100px;
+        padding: 5px ;
       }
     @include media(xlarge) {
         padding: 5px 25px;
@@ -213,7 +217,9 @@
         align-items: flex-start;
         justify-content: space-between;
         margin-top: 120px;
-        width: 50%;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
 
         @include media(medium) {
             width: 100%;
@@ -233,6 +239,10 @@
 
             @include media(medium) {
                 font-size: 45px;
+                margin-top: 20px;
+              }
+            @include media(small) {
+                font-size: 35px;
                 margin-top: 20px;
               }
         }

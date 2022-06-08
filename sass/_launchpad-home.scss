@@ -1,37 +1,30 @@
 .launchpad-home-container{
     width: 100%;
     height: 100%;
-    position: relative;
-
-    @include media(xlarge) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .container-bg{
-          height: 100%;
-          object-fit: cover;
-          
-        @include media(small) {
-            min-height: 500px;
-        }
-      }
+    background-image: url('/assets/Group-167.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
     .launchpad-home-wrapper{
-        width: 60%;
-        max-height: 500px;
-        position: absolute;
-        top: 10%;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 5px 200px;
+        padding: 5px ;
+        max-width: 1400px;
+        margin: 0 auto;
 
         @include media(xxlarge) {
-            padding: 5px 100px;
+            padding: 5px ;
           }
         @include media(xlarge) {
             padding: 5px 25px;
@@ -94,10 +87,6 @@
             max-width: 500px;
             margin-top: 50px;
 
-            @include media(xlarge) {
-                margin-top: 0px;
-                max-height: 120px;
-            }
 
             @include media(small) {
                 width: 80%;
@@ -216,6 +205,8 @@
         justify-content: space-between;
         align-items: flex-start;
         height: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
 
         @include media(xlarge) {
            flex-direction: column;
@@ -295,11 +286,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 200px;
-    margin: 30px 0;
+    padding: 5px;
+    margin: 30px auto;
+    max-width: 1400px;
 
     @include media(xxlarge) {
-        padding: 5px 100px;
+        padding: 5px;
       }
     @include media(xlarge) {
         padding: 5px 25px;
@@ -328,6 +320,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        height: 250px;
         background-color: #fff;
         border-radius: 20px;
         text-align: center;
@@ -377,15 +370,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 0;
+    margin: 30px auto;
     background-image: url("/assets/Path 7.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 5px 200px;
+    padding: 5px;
 
     @include media(xxlarge) {
-        padding: 5px 100px;
+        padding: 5px;
       }
     @include media(xlarge) {
         padding: 5px 25px;
@@ -398,6 +391,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1400px;
 
         @include media(large) {
             flex-direction: column;
@@ -486,6 +480,7 @@
 
                 .box{
                     height: 99px;
+                    width: 99px;
                     border-radius: 20px;
                     background-color: #fff;
                     margin: 5px;
@@ -495,6 +490,7 @@
                     font-size: 20px;
                     color: #fff;
                     margin-left: 10px;
+                    width: 100px;
                 }
             }
         }
@@ -505,11 +501,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px 200px;
-    margin: 50px 0;
+    padding: 5px;
+    margin: 50px auto;
+    max-width: 1400px;
 
     @include media(xxlarge) {
-        padding: 5px 100px;
+        padding: 5px;
       }
     @include media(xlarge) {
         padding: 5px 25px;
