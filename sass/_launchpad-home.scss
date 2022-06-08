@@ -21,13 +21,13 @@
 
     .launchpad-home-wrapper{
         width: 60%;
-        max-height: 600px;
+        max-height: 500px;
         position: absolute;
-        top: 0;
+        top: 10%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: flex-start;
+        justify-content: center;
         padding: 5px 200px;
 
         @include media(xxlarge) {
@@ -35,12 +35,11 @@
           }
         @include media(xlarge) {
             padding: 5px 25px;
-            width: 80%;
-
+            width: 100%;
+            top: 0;
           }
         @include media(medium) {
             padding: 5px;
-            width: 100%;
           }
 
 
@@ -49,8 +48,9 @@
             color: #9DCCEE;
             margin-bottom: 0px;
 
-            @include media(large) {
+            @include media(xlarge) {
                 font-size: 27px;
+                max-height: 40px;
             }
             @include media(medium) {
                 font-size: 18px;
@@ -58,15 +58,16 @@
         }
         h5{
             font-size: 73px;
-            margin-top: -60px;
+            margin-top: 0px;
             margin-bottom: 0px;
 
-            @include media(large) {
+            @include media(xlarge) {
                 font-size: 43px;
+                max-height: 120px;
             }
+
             @include media(medium) {
                 font-size: 28px;
-                margin-top: -60px;
             }
         }
 
@@ -75,11 +76,31 @@
             margin-bottom: 0px;
 
             
-            @include media(large) {
+            @include media(xlarge) {
                 font-size: 16px;
+                max-height: 80px;
             }
+
             @include media(medium) {
                 font-size: 12px;
+            }
+        }
+
+        .flex{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            max-width: 500px;
+            margin-top: 50px;
+
+            @include media(xlarge) {
+                margin-top: 0px;
+                max-height: 120px;
+            }
+
+            @include media(small) {
+                width: 80%;
             }
         }
 
@@ -89,18 +110,10 @@
             align-items: center;
             margin-top: -10px;
 
-            
-            @include media(large) {
-                margin-top: -50px;
-            }
-            @include media(medium) {
-                margin-top: -30px; 
-            }
-
             & > div {
                 display: flex;
                 align-items: center;
-                margin: 5px;
+                margin-bottom: 5px;
             }
 
             .gradient{
@@ -120,7 +133,11 @@
                 border: 1px solid #A6CBEB;
                 border-radius: 10px;
                 box-shadow: 0px 0px 20px 1px rgba(157,204,238,1);
-
+                width: 100%;
+                height: 50px;
+                font-family: 'İntegral';
+                font-size: 12px;
+                
                 &:focus-visible, &:focus{
                     border: none;
                     outline: none;
@@ -132,7 +149,9 @@
         .powered{
             display: flex;
             align-items: center;
-
+            justify-content: center;
+            margin-top: 20px;
+                
             img{
                 width: 45px;
                 height: 45px;
@@ -150,10 +169,9 @@
             h6{
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 color: #404041 !important;
                 font-size: 25px;
-
                             
                 @include media(large) {
                     font-size: 16px;
@@ -161,6 +179,12 @@
                 @include media(medium) {
                     font-size: 14px;
                 }
+            }
+
+            .second{
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
@@ -191,6 +215,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        height: 100%;
 
         @include media(xlarge) {
            flex-direction: column;
@@ -230,15 +255,30 @@
         }
 
         .entry-title-text{
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
+            justify-content: space-between;
             font-size: 21px;
 
-            .p{
+            p{
+                height: 100%;
                 font-size: 21px;
                 font-weight: 500;
                 margin-top: 15px;
+            }
+
+            .p{
+                font-family: 'İntegral';
+                height: 140px;
+                display: flex;
+                align-items: flex-end;
+
+                @include  media(xlarge) {
+                    height: 100%;
+                }
             }
 
             @include media(medium) {
@@ -277,6 +317,21 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+          @include media(medium) {
+            flex-wrap: wrap;
+          }
+    }
+
+    .text-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+        text-align: center;
+        margin: 5px;
         background-clip: padding-box;
         border:3px solid transparent;
         position: relative;
@@ -293,17 +348,10 @@
             border-radius: inherit;
             background: linear-gradient(90deg, rgba(250,212,229,1) 0%, rgba(250,212,229,1) 16%, rgba(157,204,238,1) 100%);
           }
-    }
 
-    .text-card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: #fff;
-        border-radius: 20px;
-        text-align: center;
-        margin: 5px;
+        @include media(medium) {
+            flex-basis: 100%;
+          }
 
         h6{
             font-size: 25px;

@@ -96,7 +96,7 @@ header{
                 
                 a{
                     color: #404041;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 700;
                     text-decoration: none;
                     display: flex;
@@ -104,10 +104,10 @@ header{
                     justify-content: center;
 
                     @include media(medium) {
-                        font-size: 14px;
+                        font-size: 12px;
                       }
                     @include media(small) {
-                        font-size: 12px;
+                        font-size: 10px;
                       }
 
                     &:hover{
