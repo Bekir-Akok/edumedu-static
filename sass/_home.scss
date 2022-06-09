@@ -8,6 +8,12 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 350px;
+
+
+    @include media(large) {
+      max-height: 100%;
+    }
 
     .first-section-title{
         max-width: 1400px;
@@ -133,6 +139,11 @@
                     text-align: center;
                     font-weight: 400;
                     font-size: 24px;
+                    margin: 30px;
+
+                    @include media(large) {
+                      
+                    }
                 }
                 
                 ul{
@@ -195,6 +206,11 @@
   p{
     font-size: 16px;
     margin-bottom: 25px;
+  }
+
+  .last{
+    margin-top: 55px;
+    margin-bottom: 0;
   }
 
   img{
@@ -360,5 +376,13 @@
         }
       }
     }
+  }
+}
+
+.margin-top{
+  margin-top: 500px;
+
+  @include media(large) {
+    margin-top: 50px;
   }
 }
