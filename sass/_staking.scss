@@ -191,6 +191,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+                    width: 70%;
 
                     p{
                         font-size: 14px;
@@ -204,18 +205,24 @@
                     }
                 }
 
-                .second{
-                    display: flex;
-                    align-items: center;
+                .second-2{
                     height: 53px;
+                    width: 100%;
+                    display: none;
+
+                    @include media(medium) {
+                        display: flex;
+                        align-items: center;
+                      }
 
                     input{
-                        background-color: #c0c0c0;
+                        background-color: #eee9e9;
                         border-radius: 10px;
                         outline: none;
                         border: none;
                         color: white;
-                        width: 120%;
+                        width: 130%;
+                        padding-left: 10px;
 
                         &:focus,&:focus-visible{
                             outline: none;
@@ -223,18 +230,62 @@
                         }
 
                         &::placeholder{
-                            color: #fff;
+                            color: #000;
                             padding-left: 10px;
                         }
                     }
 
                     button{
                         background: linear-gradient(90deg, rgba(250,212,229,1) 0%, rgba(250,212,229,1) 16%, rgba(157,204,238,1) 100%);
-                        border-top-right-radius: 10px;
-                        border-bottom-right-radius: 10px;
+                        border-radius: 10px;
                         outline: none;
                         border: none;
-                        margin-left: -20px;
+                        margin-left: -10px;
+                        font-family: 'İntegral';
+                    }
+                }
+
+                .second{
+                    display: flex;
+                    align-items: center;
+                    height: 53px;
+                    width: 135%;
+
+                    @include media(xlarge) {
+                        width: 50%;
+                      }
+                    @include media(large) {
+                        width: 90%;
+                      }
+                    @include media(medium) {
+                        display: none;
+                      }
+
+                    input{
+                        background-color: #eee9e9;
+                        border-radius: 10px;
+                        outline: none;
+                        border: none;
+                        color: white;
+                        width: 130%;
+                        padding-left: 10px;
+
+                        &:focus,&:focus-visible{
+                            outline: none;
+                            border: none;
+                        }
+
+                        &::placeholder{
+                            color: #000;
+                        }
+                    }
+
+                    button{
+                        background: linear-gradient(90deg, rgba(250,212,229,1) 0%, rgba(250,212,229,1) 16%, rgba(157,204,238,1) 100%);
+                        border-radius: 10px;
+                        outline: none;
+                        border: none;
+                        margin-left: -10px;
                         font-family: 'İntegral';
                     }
                 }
@@ -327,7 +378,7 @@
             margin: -3px;
             z-index: -1;
             border-radius: inherit;
-            background: linear-gradient(90deg, rgba(250,212,229,1) 0%, rgba(250,212,229,1) 16%, rgba(157,204,238,1) 100%);
+            background: rgba(157,204,238,1);
           }
 
           .p{
@@ -335,6 +386,7 @@
 
             span{
                 text-align: start !important;
+                font-family: 'Montserrat', sans-serif !important;
             }
 
             }
@@ -349,18 +401,51 @@
             span{
                 font-size: 35px;
                 font-weight: 400;
-                font-family: 'İntegral';
+                font-family: 'Montserrat', sans-serif !important;
                 text-align: end;
             }
         }
 
-        h6{
-            font-size: 50px;
-            font-weight: 300;
-            width: 5px;
+        .divider{
+            font-size: 10px;
+            font-weight: 100;
+            width: 1px;
+            height: 55px;
+            min-height: 100%;
             margin: 0 40px;
+            background-color: #000;
         }
       }
+}
+
+.staking-chart-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.staking-charts-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    p{
+        font-size: 17px;
+        width: 80px;
+        cursor: pointer;
+    }
+
+    .blue{
+        color: #9DCCEE;
+    }
+
+    .little-divider{
+        width: 1px;
+        background-color: #000;
+        height: 20px;
+        margin: 0 20px;
+    }
 }
 
 .staking-charts{
@@ -409,14 +494,13 @@
               }
 
               .staking-divider{
-                font-size: 80px;
-                font-weight: 300;
-                color: #404041;
+                background-color: #707070;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-top: -50px;
-                width: 5px;
+                width: 3px;
+                height: 80px;
 
                 @include media(large) {
                     display: none;
@@ -433,6 +517,7 @@
 
                   p{
                       font-size: 17px;
+                      font-family: 'Montserrat', sans-serif;
                   }
 
                   h6{
@@ -440,10 +525,12 @@
                       color: #9DCCEE;
                       font-weight: 400;
                       margin-bottom: 0px;
+                      font-family: 'Montserrat', sans-serif;
                   }
 
                   span{
                       font-size: 15px;
+                      font-family: 'Montserrat', sans-serif;
                   }
               }
           }
