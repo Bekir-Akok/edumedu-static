@@ -4127,6 +4127,10 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  cursor: pointer;
+}
+
 main {
   width: 100%;
   height: auto;
