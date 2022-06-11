@@ -11,6 +11,9 @@ footer{
     @include media(xlarge) {
       max-height: 986px;
     }
+    @include media(small) {
+      min-height: 900px;
+    }
 
     .footer-container{
       display: flex;
@@ -20,6 +23,7 @@ footer{
       padding: 5px ;
       max-width: 1400px;
       margin: 0 auto;
+      height: 100%;
 
       @include media(xxlarge) {
           padding: 5px ;
@@ -30,9 +34,14 @@ footer{
       @include media(medium) {
           padding: 5px;
         }
+        @include media(small) {
+          min-height: 900px;
+        }
+
 
         .footer-first{
           width: 100%;
+          height: 100%;
           display: flex;
           align-items: center;
 
